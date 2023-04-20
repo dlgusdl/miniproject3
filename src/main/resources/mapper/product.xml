@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop.metacoding.miniproject3.model.product.ProductRepository">
+     <select id="findAll" resultType="shop.metacoding.miniproject3.model.product.Product">
+        select * from product_tb
+    </select>
+
+     <select id="findById" resultType="shop.metacoding.miniproject3.model.product.Product">
+         select * from product_tb where id = #{id}
+     </select>   
+
+     <insert id="insert">
+         insert into product_tb (product_name, product_price, product_qty, created_at) values(#{product_name}, #{product_price}, #{product_qty}, now())
+     </insert>    
+
+     <delete id="deleteById" >
+         delete from product_tb where id = #{id} 
+     </delete>    
+
+     <update id="updateById" >
+         update product_tb set product_name= #{product_name}, product_price= #{product_price}, product_qty= #{product_qty} where id = #{id} 
+     </update>  
+
+</mapper> 

@@ -1,0 +1,14 @@
+.qButton {
+    font-size: 1.0em;
+    font-weight: bold;
+    width: 124px;
+    height: 35px;
+    display: inline;
+    float: right;
+    margin-right: 3px;
+    background-color: rgb(152, 193, 255);
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.2em 2em;
+}
